@@ -128,10 +128,16 @@ passport.deserializeUser(function(obj, done) {
   });
 
 // Create a session store in MongoDB
+// const store = new MongoDBStore({
+//     uri: 'mongodb://localhost/mydatabase',
+//     collection: 'sessions'
+// });
+
 const store = new MongoDBStore({
-    uri: 'mongodb://localhost/mydatabase',
+    uri: 'mongodb+srv://SERVER_USER:Re9YcJ0QYDZoa5R8@cluster0.qonwhtd.mongodb.net/?retryWrites=true&w=majority',
     collection: 'sessions'
 });
+
 // Parse JSON request bodies
 app.use(express.json());
 
