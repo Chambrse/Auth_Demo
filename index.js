@@ -89,7 +89,7 @@ passport.use(new LocalStrategy(
 passport.use(new GoogleStrategy({
     clientID: '455419890686-86p7261h9ujgc92dejgmuth7dm8s2mv9.apps.googleusercontent.com', // Replace with your client ID from Google Developer Console
     clientSecret: 'MPFSAnRFUC_zC0utyWfuo2Av', // Replace with your client secret from Google Developer Console
-    callbackURL: "http://auth-demo-budd-d853cd15782f.herokuapp.com/auth/google/callback"
+    callbackURL: "https://auth-demo-budd-d853cd15782f.herokuapp.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     profile.source = 'google';
