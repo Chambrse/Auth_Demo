@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Responsive Login and Signup Form </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <section class="container forms">
+        <div class="form login">
+            <div class="form-content">
+                <!-- <h1>Logged in</h1> -->
+                <header>Logged in!</header>
+                <p>This site doesn't actually have any functionality, but is just to demonstrate the authentication
+                    flows. to do: display user data</p>
+                <div class="field button-field">
+                    <button id="LogOutButton">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const logoutButton = document.getElementById('LogOutButton');
+
+        // Add an event listener to the button
+        logoutButton.addEventListener('click', () => {
+            // Make a fetch request to your logout endpoint
+            fetch('/logout', {
+                method: 'GET'
+            })
+                .then(response => {
+                    // You can add any logic you want here after the request is completed
+                    if (response.ok) {
+                        // If the response was successful, you can for example redirect the user to the login page
+                        window.location.href = '/login';
+                    } else {
+                        alert('Logout failed');
+                    }
+                })
+                .catch(error => {
+                    // Handle any errors
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+    <!-- <script src="/js/script.js"></script> -->
+</body>
+
+</html>
