@@ -10,7 +10,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/mydatabase', {
+mongoose.connect('mongodb+srv://SERVER_USER:Re9YcJ0QYDZoa5R8@cluster0.qonwhtd.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
